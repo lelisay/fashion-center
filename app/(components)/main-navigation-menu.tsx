@@ -56,7 +56,7 @@ const components: { title: string; href: string; description: string }[] = [
 const MainMenu = () => {
 
     return (
-        <div className="flex w-full p-4 items-center bg-slate-700 ">
+        <div className="flex w-full py-4 px-24 items-center bg-slate-700 ">
             <div className="flex-1  ">
                 logo
             </div>
