@@ -33,7 +33,25 @@ const NewDesignShow = () => {
             description: 'Comfortable and stylish',
             stockStatus: 'In Stock'
         },
-        // Add more products as needed
+        {
+            images: ['/images/image4.png','/images/image5.png','/images/image1.png', '/images/image2.png','/images/image3.png',  '/images/image6.png'], 
+            name: 'Elegant Dress',
+            price: '$79.99',
+            rating: 5,
+            reviews: 15,
+            description: 'Beautiful evening wear',
+            discount: '20% OFF',
+            stockStatus: 'Limited Stock'
+        },
+        {
+            images: ['/images/image1.png', '/images/image2.png','/images/image3.png', '/images/image4.png','/images/image5.png', '/images/image6.png'], 
+            name: 'Casual Shirt',
+            price: '$29.99',
+            rating: 3,
+            reviews: 40,
+            description: 'Comfortable and stylish',
+            stockStatus: 'In Stock'
+        },
     ];
 
     return (
@@ -41,7 +59,7 @@ const NewDesignShow = () => {
             <div className='text-black text-center text-6xl font-extrabold mb-4'>
                 NEW DESIGNS
             </div>
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 '>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 '>
                 {products.map((product, index) => (
                     <ProductCard
                         key={index}
@@ -53,6 +71,7 @@ const NewDesignShow = () => {
                         description={product.description}
                         discount={product.discount}
                         stockStatus={product.stockStatus}
+                        className='mt-3'
                     />
                 ))}
             </div>

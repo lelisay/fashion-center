@@ -7,6 +7,7 @@ import { Card, CardContent, CardFooter, CardTitle, CardDescription } from "@/com
 import { useState } from "react";
 import Image from "next/image";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { AlertDialogDemo } from "./alert-idalog.demo";
 
 type ProductCardProps = React.ComponentProps<typeof Card> & {
   images: string[]; // Accept an array of images
@@ -118,7 +119,7 @@ export default function ProductCard({
 
         <CardFooter className="p-4">
           <div className="flex justify-between space-x-2 w-full">
-            <Button className="w-full" variant="outline">Buy now</Button>
+            <AlertDialogDemo/>
             <Button className="w-full" variant="secondary" onClick={handleSeePreview}>See preview</Button>
           </div>
         </CardFooter>
