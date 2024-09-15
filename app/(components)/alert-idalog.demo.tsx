@@ -21,7 +21,7 @@ export function AlertDialogDemo() {
         <div className="">
             <AlertDialog >
                 <AlertDialogTrigger asChild>
-                    <Button variant="outline">Show Dialog</Button>
+                    <Button variant="outline" className="">Preview</Button>
                 </AlertDialogTrigger>
                 <div className="bg-yellow-700">
                     <AlertDialogContent className="lg:min-w-[1300px] min-h-[680px] bg-white gap-0 text-black flex flex-col" >

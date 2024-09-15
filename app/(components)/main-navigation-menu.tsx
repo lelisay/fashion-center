@@ -15,6 +15,7 @@ import Link from "next/link"
 import React from "react"
 import { cn } from "@/lib/utils"
 import { SearchDesign } from "./search-combo-box"
+import { ShoppingBag, User } from "lucide-react"
 const components: { title: string; href: string; description: string }[] = [
     {
         title: "Alert Dialog",
@@ -142,7 +143,12 @@ const MainMenu = () => {
             </div>
 
             <div className="flex-1  ">
-                <div className="flex justify-center items-center">cart  user</div>
+                <div className="flex justify-end items-center gap-4">
+                    <ShoppingBag/>
+                    <User/>
+                </div>
+              
+
             </div>
         </div>
     )
