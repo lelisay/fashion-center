@@ -60,7 +60,7 @@ export default function ProductCard({
   return (
     <div className="max-w-xs">
       <Card
-        className={cn("shadow-lg rounded-lg overflow-hidden w-72 h-[30rem] hover:h-[34rem]", className)} // Set fixed width and height
+        className={cn("shadow-lg rounded-lg overflow-hidden w-72 h-[32rem]", className)} // Set fixed width and height
         {...props}
       >
         <CardContent className="px-4 pt-4 pb-2">
@@ -102,7 +102,11 @@ export default function ProductCard({
 
           {/* Product Info */}
           <div className="mt-4">
-            <CardTitle className="text-lg font-bold">{name}</CardTitle>
+           <div className="flex justify-between items-end ">
+           <CardTitle className="text-lg font-bold">{name}</CardTitle>
+           <div className="mt-2 text-lg font-bold text-gray-800">{price}</div>
+           </div>
+
             <CardDescription className="text-sm text-gray-500">{description || "Perfect for all seasons"}</CardDescription>
             <div className="flex items-center space-x-1 mt-2">
               {Array.from({ length: 5 }, (_, index) => (
@@ -113,19 +117,16 @@ export default function ProductCard({
               ))}
               <span className="text-sm text-gray-500">({reviews} reviews)</span>
             </div>
-            <div className="mt-2 text-lg font-bold text-gray-800">{price}</div>
           </div>
         </CardContent>
 
         <CardFooter className="p-4">
           <div className="flex justify-between space-x-2 w-full">
-            <AlertDialogDemo/>
-            <Button className="w-full" variant="secondary" onClick={handleSeePreview}>See preview</Button>
+            <AlertDialogDemo />
+            <Button className="w-fit bg-red-500 hover:bg-red-600" variant="secondary" onClick={handleSeePreview}>Add to cart</Button>
           </div>
         </CardFooter>
       </Card>
-
-      {/* Dialog for "See preview" */}
       
     </div>
   );
